@@ -1,0 +1,312 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #8CABFF;
+}
+
+.hidden {
+    display: none;
+}
+
+.svg-icon {
+    width: 1.5rem;
+}
+
+.btn-primary {
+    padding: 6px 15px;
+    background-color: #897399;
+    color: #fff;
+    border-radius: .5rem;
+    border: 1px solid #897399;
+}
+
+.formContainer {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+    .title {
+        font-size: 0.9rem;
+        font-weight: 200;
+    }
+
+    .formWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+        text-align: center;
+        padding: 1rem 2rem;
+        border-radius: 4px;
+        background-color: #fff;
+        width: 280px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: .8rem;
+            margin: .5rem 0;
+
+            input{
+                font-size: 1rem;
+                padding: 5px 8px;
+                border: 0;
+                border-bottom: 1px solid #897399;
+                border-radius: 4px;
+                &:focus {
+                    outline: none;
+                    // border: 0;
+                }
+            }
+            label {
+                text-align: left;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+            button {
+                margin-top: 10px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.homeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .homeWrapper {
+        display: flex;
+        background-color: #fff;
+        // border: 1px solid #504099;
+        border-radius: .5rem;
+        width: 80%;
+        height: 80%;
+        overflow: hidden;
+        
+    }
+}
+
+.side-bar {
+    flex: 1;
+    background-color: #504099;
+
+    .headInfo {
+        color: #ccc;
+        font-size: .8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem;
+        background-color: #504099;
+        border-bottom: 1px solid #fff;
+        img {
+            background-color: red;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .logo {
+            font-size: .9rem;
+        }
+        div{
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            button {
+                background: none;
+                color: #ccc;
+                border: 1px solid #ccc;
+                border-radius: .3rem;
+                font-size: .6rem;
+                padding: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .search {
+        overflow-y: auto;
+        // height: 100%;
+        height: calc(89%);
+
+        .search-form {
+            padding: .5rem;
+            border-bottom: 1px solid #ccc;
+            input {
+                border: transparent;
+                background-color: #504099;
+                outline: none;
+                color: #fff;
+            }
+            .search-user {
+                padding: 0;
+                margin-top: .5rem;
+                cursor: pointer;
+            }
+        }
+
+        .search-user {
+            display: flex;
+            gap: .8rem;
+            align-items: center;
+            padding: .5rem;
+            color: #fff;
+            font-size: .9rem;
+            cursor: pointer;
+            &:hover {
+                background-color: #974EC3;
+            }
+            img {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            p {
+                margin: 0;
+                font-size: .75rem;
+                color: #ccc;
+            }
+        }
+    }
+}
+.chat {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .chatNav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem .6rem;
+        background-color: #9F91CC;
+        border-bottom: 1px solid #ccc;
+        overflow: hidden;
+        color: #fff;
+        .userName {
+            font-size: 1.1rem;
+        }
+
+        .chatInfo {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+
+            svg {
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+            }
+            span {
+                font-size: .9rem;
+            }
+        }
+    }
+}
+
+.chatInput {
+    display: flex;
+    padding: .5rem;
+    background-color: #ccc;
+    align-items: center;
+    input {
+        flex: 3;
+        outline: none;
+        border: none;
+        padding: 8px;
+        border-radius: 5px;
+    }
+    .chatItem {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        svg {
+            width: 25px;
+            height: 25px;
+            margin-left: 1rem;
+        }
+
+        button {
+            border: none;
+            border-radius: 5px;
+            background-color: #4477CE;
+            padding: 8px 12px;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}
+
+.chatMessage {
+    height: 100%;
+    overflow-y: auto;
+    padding: .5rem;
+
+    .message {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        .messageInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            span {
+                font-size: .8rem;
+                color: #777777;
+            }
+        }
+
+        .messageContent {
+            display: flex;
+            flex-direction: column;
+            max-width: 80%;
+            img {
+                width: 50%;
+            }
+
+            p {
+                padding: 5px;
+                border-radius: 0 8px 8px 8px;
+                background-color: #8CABFF;
+                max-width: max-content;
+            }
+        }
+
+        &.owner {
+            flex-direction: row-reverse;
+            .messageContent {
+                align-items: flex-end;
+                p{
+                    color: #fff;
+                    background-color: #512B81;
+                    border-radius: 8px 0 8px 8px;
+                }
+            }
+        }
+    }
+
+}
+
+
