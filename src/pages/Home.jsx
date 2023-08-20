@@ -8,7 +8,7 @@ function Home() {
             <Sidebar />
             <Chat />
         </div>
-    </main>
+    </main> 
   )
 }
 
